@@ -105,3 +105,7 @@ rails g controller api/animals index show new create edit update destroy
 
 # Hit Postman
 http://localhost:3000/api/animals
+
+# Basic Auth for API only App
+https://dev.to/risafj/guide-to-devisetokenauth-simple-authentication-in-rails-api-pfj
+https://devise-token-auth.gitbook.io/devise-token-auth/usage
