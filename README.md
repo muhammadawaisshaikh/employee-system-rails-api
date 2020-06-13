@@ -56,3 +56,52 @@ end
 
 # devise_token_auth: Simple Authentication in Rails API
 https://dev.to/risafj/guide-to-devisetokenauth-simple-authentication-in-rails-api-pfj
+
+# App Creation Full MVC Rails
+rails new qurbaniapp-dashboard --database=postgresql
+
+# Creating DB
+rails db:create
+
+# Devise GEM
+https://github.com/plataformatec/devise
+
+# Rolify GEM - Very simple Roles library
+https://github.com/RolifyCommunity/rolify
+
+# Model Creation - Devise
+rails generate devise Admin (after this add columns extra in migration to make model as your needs)
+
+# Model Creation - Rolify
+rails g rolify Role Admin (To manage roles)
+
+# Making Views of the Device created model - Device
+rails generate devise:views Admins
+
+# Making Controllers of the Device created model - Device
+rails generate devise:controllers admins
+
+# Model Creation Sample (Auto foreign key and association created)
+rails g model Product name:string description:text amount:integer admin:references
+
+# Migrations Add for Associations with Foreign Key
+adding admin to productsAdmin model as a foreign key
+
+# Migration to Remove Associations of Foreign Key
+(rails generate migration RemoveAdminRefToAnimals admin:references)
+def change if foreign_key_exists?(:animals, :admins) remove_foreign_key :animals, :admins end end
+
+# Making Controllers and views with scaffold
+rails g controller super_admin/admin index show new create edit update destroy
+
+# removing columns from table using migration
+rails generate migration RemoveAdminIdFromAnimals admin_id:bigint
+
+# API
+controllers > + api
+
+# Api Controllers
+rails g controller api/animals index show new create edit update destroy
+
+# Hit Postman
+http://localhost:3000/api/animals
