@@ -107,5 +107,4 @@ rails g controller api/animals index show new create edit update destroy
 http://localhost:3000/api/animals
 
 # Basic Auth for API only App
-https://dev.to/risafj/guide-to-devisetokenauth-simple-authentication-in-rails-api-pfj
-https://devise-token-auth.gitbook.io/devise-token-auth/usage
+https://medium.com/@billy.sf.cheng/a-rails-6-application-part-1-api-1ee5ccf7ed01
