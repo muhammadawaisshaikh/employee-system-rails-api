@@ -107,4 +107,8 @@ rails g controller api/animals index show new create edit update destroy
 http://localhost:3000/api/animals
 
 # Basic Auth for API only App
-https://medium.com/@billy.sf.cheng/a-rails-6-application-part-1-api-1ee5ccf7ed01
+https://github.com/lynndylanhurley/devise_token_auth
+
+
+> So you need the next parameters to access: access-token, client, uid, url
+curl -XGET -v -H 'Content-Type: application/json' -H 'access-token: lW1c60hYkRwAinzUqgLfsQ' -H 'client: W_xCQuggzNOVeCnNZbjKFw' -H "uid: email@domain.com" http://domain/api/v1/auth/validate_token
