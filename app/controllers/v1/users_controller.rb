@@ -1,4 +1,7 @@
 class V1::UsersController < ApplicationController
+
+  before_action :authenticate_v1_admin!
+
   def index
     users = User.all
     render json: { users: users }, status: :ok
