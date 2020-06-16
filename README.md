@@ -110,5 +110,7 @@ http://localhost:3000/api/animals
 https://github.com/lynndylanhurley/devise_token_auth
 https://medium.com/@tunbosunogunlana1/authentication-api-with-rails-6-0-and-device-token-auth-gem-39ca1ad0520e
 
-> So you need the next parameters to access: access-token, client, uid, url
-curl -XGET -v -H 'Content-Type: application/json' -H 'access-token: lW1c60hYkRwAinzUqgLfsQ' -H 'client: W_xCQuggzNOVeCnNZbjKFw' -H "uid: email@domain.com" http://domain/api/v1/auth/validate_token
+> So you need the next parameters to access: access-token, client, uid, expiry
+
+http://localhost:3000/v1/auth/sign_in (POST)
+http://localhost:3000/v1/auth/sign_out (DELETE)
